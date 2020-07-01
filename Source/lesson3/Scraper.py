@@ -21,7 +21,7 @@ file = open('wiki_links.txt','w')
 file.write(soup.title.string)
 file.write('\n================================================================\n')
 
-for line in soup.find_all('a'):#Searching all the links in html
+for line in soup.find_all('a    '):#Searching all the links in html
     formatLink=(str(line.get('href')).strip()) #format a link
     if '/' in formatLink: #
         if '/wiki/' in formatLink:
